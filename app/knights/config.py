@@ -1,4 +1,4 @@
-KNIGHTS = {
+KNIGHTS: dict[str, dict] = {
     "lancelot": {
         "name": "Lancelot",
         "power": 35,
