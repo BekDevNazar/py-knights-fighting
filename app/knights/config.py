@@ -1,4 +1,31 @@
-KNIGHTS: dict[str, dict] = {
+from typing import TypedDict
+
+
+class ArmourDict(TypedDict):
+    part: str
+    protection: int
+
+
+class WeaponDict(TypedDict):
+    name: str
+    power: int
+
+
+class PotionDict(TypedDict):
+    name: str
+    effect: dict[str, int]
+
+
+class KnightDict(TypedDict):
+    name: str
+    power: int
+    hp: int
+    armour: list[ArmourDict]
+    weapon: WeaponDict
+    potion: PotionDict | None
+
+
+KNIGHTS: dict[str, KnightDict] = {
     "lancelot": {
         "name": "Lancelot",
         "power": 35,

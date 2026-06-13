@@ -1,4 +1,7 @@
-def prepare_knight(knight: dict) -> None:
+from app.knights.config import KnightDict
+
+
+def prepare_knight(knight: KnightDict) -> None:
     knight["protection"] = sum(
         armour["protection"] for armour in knight["armour"]
     )

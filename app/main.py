@@ -1,7 +1,8 @@
+from app.knights.config import KnightDict
 from app.preperation.prepare import prepare_knight
 
 
-def battle(knights_config: dict[str, dict]) -> dict[str, int]:
+def battle(knights_config: dict[str, KnightDict]) -> dict[str, int]:
     for knight in knights_config.values():
         prepare_knight(knight)
 
